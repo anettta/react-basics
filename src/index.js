@@ -32,7 +32,7 @@ const Image = () => {
   );
 };
 const Title = () => {
-  return <h1>Divergent</h1>;
+  return <h1 style={{ color: "#617d98", fontSize: "0.75rem", marginTop: "0.25rem" }}>Divergent</h1>;
 };
 
 const Author = () => {
