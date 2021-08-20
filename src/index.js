@@ -2,11 +2,11 @@ import React from "react";
 import ReactDom from "react-dom";
 import "./index.css";
 import { books } from "./books";
-import Book from "./book";
+import Book from "./Book";
 
 // setup vars
 
-const BookList = () => {
+export const BookList = () => {
   return (
     <section className="booklist">
       {books.map((book) => {
