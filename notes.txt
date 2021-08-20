@@ -1,0 +1,17 @@
+
+JSX CSS
+
+// const Title = () => {
+//   return (
+//     <h1 style={{ color: "#617d98", fontSize: "0.75rem", marginTop: "0.25rem" }}>
+//       Divergent
+//     </h1>
+//   );
+// };
+
+PROPS = properties
+
+object destructuring in JS:
+
+// Func = (props)...
+// const { img, title, author } = props;

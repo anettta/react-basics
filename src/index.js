@@ -2,45 +2,38 @@ import React from "react";
 import ReactDom from "react-dom";
 import "./index.css";
 
+// setup vars
+const firstBook = {
+  img:
+    "https://images-na.ssl-images-amazon.com/images/I/51YIcGCYtxL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
+  title: "Divergent",
+  author: "Veronica Roth",
+};
+
 const BookList = () => {
   return (
     <section className="booklist">
-      <Book />
-      <Book />
-      <Book />
+      <Book
+        img={firstBook.img}
+        title={firstBook.title}
+        author={firstBook.author}
+      >
+        <p>description here</p>
+      </Book>
     </section>
   );
 };
 
-const Book = () => {
+const Book = (props) => {
+  const { img, title, author, children } = props;
   return (
     <article className="book">
-      <Image></Image>
-      <Title />
-      <Author />
+      <img src={img} alt="" />
+      <h1>{title}</h1>
+      <h4>{author.toUpperCase()}</h4>
+      {children}
     </article>
   );
-};
-
-const Image = () => {
-  return (
-    <img
-      className="picture"
-      src="https://images-na.ssl-images-amazon.com/images/I/51YIcGCYtxL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg"
-      alt=""
-    />
-  );
-};
-const Title = () => {
-  return (
-    <h1 style={{ color: "#617d98", fontSize: "0.75rem", marginTop: "0.25rem" }}>
-      Divergent
-    </h1>
-  );
-};
-
-const Author = () => {
-  return <h5>Veronica Roth</h5>;
 };
 
 ReactDom.render(<BookList />, document.getElementById("root"));
