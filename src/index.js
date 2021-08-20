@@ -1,31 +1,9 @@
 import React from "react";
 import ReactDom from "react-dom";
 import "./index.css";
+import { books } from "./books";
 
 // setup vars
-const books = [
-  {
-    id: 1,
-    img:
-      "https://images-na.ssl-images-amazon.com/images/I/51YIcGCYtxL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
-    title: "Divergent",
-    author: "Veronica Roth",
-  },
-  {
-    id: 2,
-    img:
-      "https://images-na.ssl-images-amazon.com/images/I/51h4JPR8ZIL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
-    title: "Insurgent",
-    author: "Veronica Roth",
-  },
-  {
-    id: 3,
-    img:
-      "https://images-na.ssl-images-amazon.com/images/I/51WKe9aGJIL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
-    title: "Allegiant",
-    author: "Veronica Roth",
-  },
-];
 
 const BookList = () => {
   return (
@@ -39,13 +17,18 @@ const BookList = () => {
 };
 
 const Book = ({ img, title, author }) => {
-  // attribut, eventHandler
+  // attribute, eventHandler
   // onClick, onMouseOver
   const clickHandler = () => {
     alert("hello world");
   };
   return (
-    <article className="book">
+    <article
+      className="book"
+      onMouseOver={() => {
+        console.log(title);
+      }}
+    >
       <img src={img} alt="" />
 
       <h1>{title}</h1>
