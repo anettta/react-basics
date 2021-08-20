@@ -17,3 +17,5 @@ object destructuring in JS:
 // const { img, title, author } = props;
 
 map will return a new array 
+
+NPM RUN BUILD before adding project to Netlify
