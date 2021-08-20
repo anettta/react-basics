@@ -1,3 +1,5 @@
+import React from "react";
+
 export const Book = ({ img, title, author }) => {
   // attribute, eventHandler
   // onClick, onMouseOver
