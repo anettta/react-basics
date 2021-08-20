@@ -15,3 +15,5 @@ object destructuring in JS:
 
 // Func = (props)...
 // const { img, title, author } = props;
+
+map will return a new array 
